@@ -67,6 +67,36 @@
             font-weight: bold;
             color: #00ffc3;
         }
+        .price-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .price-section h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+        .price-section .strike-through {
+            position: relative;
+            color: #cf0101;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .price-section .strike-through:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #cf0101;
+            top: 50%;
+            left: 0;
+            transform: rotate(-10deg);
+        }
+        .price-section .highlight {
+            color: #00ffc3;
+            font-size: 2rem;
+            font-weight: bold;
+        }
         .cta {
             text-align: center;
             margin-top: 20px;
@@ -88,7 +118,7 @@
 </head>
 <body>
     <header class="header">
-        <h1>NÃO FECHE ESSA PÁGINA E <span style="color: #ffffff;">LEIA TUDO ATÉ O FINAL</span> PARA NÃO PERDER!</h1>
+        <h1>NÃO FECHE ESSA PÁGINA E LEIA TUDO ATÉ O FINAL PARA NÃO PERDER!</h1>
     </header>
 
     <main class="container">
@@ -96,6 +126,12 @@
         <h3>VOCÊ FOI SELECIONADA 🫵🏻</h3>
         <p>É isso mesmo! Nem todas as pessoas são direcionadas para cá, mas <span class="highlight-red">a cada 200 alunos</span> que se inscrevem na nossa mentoria, o algoritmo dessa página escolhe <span class="highlight-red">APENAS UM</span> para receber essa oferta.</p>
         <p>E o que você vai ganhar estando aqui? <span class="highlight-red">MAIS DESCONTO</span> para garantir o <span class="highlight-blue">Acelerador de Produtividade</span> e escalar os seus resultados já de largada!</p>
+
+        <div class="price-section">
+            <h3 class="strike-through">DE: R$ 127,00</h3>
+            <h3>POR APENAS: <span class="highlight">12x de R$ 9,70</span></h3>
+            <h3>Ou à vista por: <span class="highlight">R$ 97,00</span></h3>
+        </div>
 
         <div class="cta">
             <a href="#">Garanta Agora</a>
