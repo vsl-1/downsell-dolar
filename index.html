@@ -17,7 +17,7 @@
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #111;
+            background-color: #00110f;
             color: white;
         }
         .header {
@@ -43,6 +43,12 @@
             color: #00ffc3;
             text-align: center;
             font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .container h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
             margin-bottom: 20px;
         }
         .container p {
@@ -50,9 +56,13 @@
             line-height: 1.6;
             color: white;
         }
-        .highlight {
+        .highlight-red {
             font-weight: bold;
             color: #cf0101;
+        }
+        .highlight-blue {
+            font-weight: bold;
+            color: #00ffc3;
         }
         .cta {
             text-align: center;
@@ -71,22 +81,6 @@
         .cta a:hover {
             background-color: #a50000;
         }
-        .degrade {
-            background: linear-gradient(90deg, #00ffc3, #cf0101);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-        }
-        .image-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
     </style>
 </head>
 <body>
@@ -95,18 +89,10 @@
     </header>
 
     <main class="container">
-        <div class="elementor-element elementor-element-1b81227 elementor-widget elementor-widget-heading">
-            <div class="elementor-widget-container">
-                <h2 class="elementor-heading-title elementor-size-default"><span class="degrade">ATENÇÃO!!!</span></h2>
-            </div>
-        </div>
-
-        <div class="image-container">
-            <img src="/mnt/data/Captura%20de%20Tela%202025-01-13%20%C3%A0s%2018.13.21.png" alt="Captura de Tela do Site">
-        </div>
-
-        <p>É isso mesmo! Nem todas as pessoas são direcionadas para cá, mas <span class="highlight">a cada 200 alunos</span> que se inscrevem na nossa mentoria, o algoritmo dessa página escolhe <span class="highlight">APENAS UM</span> para receber essa oferta.</p>
-        <p>E o que você vai ganhar estando aqui? <span class="highlight">MAIS DESCONTO</span> para garantir o <span class="highlight">Acelerador de Produtividade</span> e escalar os seus resultados já de largada!</p>
+        <h2>ATENÇÃO!!!</h2>
+        <h3>VOCÊ FOI SELECIONADA 🫵🏻</h3>
+        <p>É isso mesmo! Nem todas as pessoas são direcionadas para cá, mas <span class="highlight-red">a cada 200 alunos</span> que se inscrevem na nossa mentoria, o algoritmo dessa página escolhe <span class="highlight-red">APENAS UM</span> para receber essa oferta.</p>
+        <p>E o que você vai ganhar estando aqui? <span class="highlight-red">MAIS DESCONTO</span> para garantir o <span class="highlight-blue">Acelerador de Produtividade</span> e escalar os seus resultados já de largada!</p>
 
         <div class="cta">
             <a href="#">Garanta Agora</a>
