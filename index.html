@@ -114,6 +114,41 @@
         .cta a:hover {
             background-color: #a50000;
         }
+        .warning-icon {
+            color: yellow;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .countdown-item {
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .countdown-digits {
+            font-size: 48px;
+            font-weight: bold;
+            color: black;
+        }
+        .countdown-label {
+            display: block;
+            margin-top: 5px;
+            color: black;
+            font-size: 14px;
+        }
+        .message {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -136,6 +171,45 @@
         <div class="cta">
             <a href="#">Garanta Agora</a>
         </div>
+
+        <div class="warning-icon">⚠️</div>
+        <div class="header">MAS VOCÊ PRECISA TOMAR<br>A DECISÃO AGORA!!!</div>
+        <div class="countdown-container">
+            <div class="countdown-item">
+                <span class="countdown-digits" id="minutes">00</span>
+                <span class="countdown-label">MINUTOS</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-digits" id="seconds">00</span>
+                <span class="countdown-label">SEGUNDOS</span>
+            </div>
+        </div>
+        <div class="message">O tempo está acabando e essa página será bloqueada...</div>
+
+        <script>
+            function startCountdown(duration) {
+                let timer = duration;
+                const minutesElement = document.getElementById('minutes');
+                const secondsElement = document.getElementById('seconds');
+
+                const countdown = setInterval(function() {
+                    const minutes = parseInt(timer / 60, 10);
+                    const seconds = parseInt(timer % 60, 10);
+
+                    minutesElement.textContent = minutes < 10 ? "0" + minutes : minutes;
+                    secondsElement.textContent = seconds < 10 ? "0" + seconds : seconds;
+
+                    if (--timer < 0) {
+                        clearInterval(countdown);
+                    }
+                }, 1000);
+            }
+
+            // Start a 5-minute countdown
+            window.onload = function() {
+                startCountdown(300);
+            }
+        </script>
     </main>
 </body>
 </html>
